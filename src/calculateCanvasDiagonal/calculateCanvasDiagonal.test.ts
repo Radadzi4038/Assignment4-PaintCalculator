@@ -41,4 +41,8 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('0.0003', '0.0004')).toBeCloseTo(0.0005);
   });
 
+  test('should trim whitespace from string inputs', () => {
+    expect(calculateCanvasDiagonal(' 3 ', ' 4 ')).toBeCloseTo(5);
+  });
+
 });
