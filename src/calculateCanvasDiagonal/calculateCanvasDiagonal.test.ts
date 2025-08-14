@@ -28,5 +28,9 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('0.3', '0.4')).toBeCloseTo(0.5);
   });
 
+  test('should handle very large numbers', () => {
+    expect(calculateCanvasDiagonal('30000', '40000')).toBeCloseTo(50000);
+  });
+
 
 });
