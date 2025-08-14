@@ -32,5 +32,9 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('30000', '40000')).toBeCloseTo(50000);
   });
 
+  test('should handle one side being zero', () => {
+    expect(calculateCanvasDiagonal('0', '5')).toBeCloseTo(5);
+    expect(calculateCanvasDiagonal('7', '0')).toBeCloseTo(7);
+  });
 
 });
