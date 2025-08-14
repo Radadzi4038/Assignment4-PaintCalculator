@@ -22,4 +22,11 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('3', 'b')).toBeNaN();
     expect(calculateCanvasDiagonal('a', 'b')).toBeNaN();
   });
+
+  test('should calculate diagonal for decimal numbers', () => {
+    expect(calculateCanvasDiagonal('3.5', '4.5')).toBeCloseTo(Math.sqrt(3.5 ** 2 + 4.5 ** 2));
+    expect(calculateCanvasDiagonal('0.3', '0.4')).toBeCloseTo(0.5);
+  });
+
+
 });
