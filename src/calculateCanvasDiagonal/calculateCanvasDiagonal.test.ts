@@ -37,4 +37,8 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('7', '0')).toBeCloseTo(7);
   });
 
+  test('should handle very small numbers', () => {
+    expect(calculateCanvasDiagonal('0.0003', '0.0004')).toBeCloseTo(0.0005);
+  });
+
 });
