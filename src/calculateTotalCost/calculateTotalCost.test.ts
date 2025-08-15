@@ -33,4 +33,9 @@ describe('calculateTotalCost', () => {
   test('should handle very large numbers', () => {
     expect(calculateTotalCost(1_000_000_000, 2_000_000_000)).toBe(3_000_000_000);
   });
+
+  test('should handle mixed positive and negative decimals', () => {
+    expect(calculateTotalCost(-10.5, 5.25)).toBeCloseTo(-5.25);
+    expect(calculateTotalCost(10.5, -5.25)).toBeCloseTo(5.25);
+  });
 });
