@@ -23,9 +23,14 @@ describe("calculateCanvasPerimeter", () => {
   });
 
   test("handles very large numbers", () => {
-  expect(calculateCanvasPerimeter("1000000000000", "2000000000000")).toEqual(6000000000000);
-  expect(calculateCanvasPerimeter("1e12", "2e12")).toEqual(6e12);
-});
+    expect(calculateCanvasPerimeter("1000000000000", "2000000000000")).toEqual(6000000000000);
+    expect(calculateCanvasPerimeter("1e12", "2e12")).toEqual(6e12);
+  });
+
+  test("handles very small numbers", () => {
+    expect(calculateCanvasPerimeter("0.000000001", "0.000000002")).toBeCloseTo(0.000000006, 15);
+    expect(calculateCanvasPerimeter("1e-9", "2e-9")).toBeCloseTo(6e-9, 15);
+  });
 
 
 });
