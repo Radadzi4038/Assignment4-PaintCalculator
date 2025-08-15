@@ -1,61 +1,74 @@
-# SENG8120 Modern Automated Testing 
-
 Version: Alpaca
 
-## Purpose
+Course: SENG8120 - Modern Automated Testing Assignment #4
+Author: Richmond Adadzi
 
-This repository houses the code we require for examples and assignments.
+Overview
 
-## Repository Usage
+This TypeScript project provides utility functions for calculating canvas sizes, required paint quantities, and painting costs. The project is built using Test-Driven Development (TDD).
 
-This repository will contain branches of code.
+You can calculate:
 
-Please refer to your instructor's directions on how to use this repository.
+-Canvas area based on dimensions
+-Amount of paint needed (including multiple coats)
+-Estimated painting cost based on paint price
 
-## Branch Usage
+Setup Instructions
+Prerequisites
+-Node.js installed on your system
+-Jest installed on your system
+-A GitHub account and Git installed
+-VS Code
 
-**Installing The Dependencies**
+Installation & Initial Setup
 
-You will need to install dependencies by using:
+Since the project was downloaded as a ZIP and then pushed to GitHub, here’s how you set it up:
 
-```bash
-npm install
-```
+1. Install Node Modules: npm install
+2. Install Jest Type Definitions: npm i --save-dev @types/jest. This allows Jest to support TypeScript typings, enabling better IntelliSense in the editor.
 
-**Running The Project**
+-Build the Project
 
-To run the project, you must first build the project:
+bash
+npm run build : This compiles TypeScript into JavaScript
 
-```bash
-npm run build
-```
+-Run the App
 
-followed by:
+bash
+npm start : Make sure you’ve built the project first with npm run build
 
-```bash
-npm start
-```
+-Running Tests
+Run all Jest unit tests:
 
-Note:  if you make a change in the production code, you must `build` & `start`.
-Otherwise, your changes will not be reflected.
-
-**Running The Tests**
-
-To run the tests, you can use
-
-```bash
+bash
 npm run test
-```
 
-To keep the tests running, you can use
+-Watch Mode:
+Continuously watch for changes and re-run tests:
 
-```bash
+bash
 npm run test -- --watch
-```
 
-To run a specific test, you can use
+-Specific Test File:
 
-```bash
-npm run test [my test name]
-```
+bash
+npm run test tests/paintRequiredCalculator.test.ts
 
+-Code Coverage
+
+Generate a code coverage report:
+npm run test -- --coverage
+Reports will appear in the /coverage folder.
+
+
+Additional Info
+
+-Edge cases and error handling are fully tested.
+-Every test file is paired with its corresponding module.
+-Invalid input (e.g., negative values or zero denominators) triggers proper errors.
+
+Notes
+
+-This repository was manually uploaded to GitHub after downloading the source ZIP.
+-All packages and dependencies were installed locally using npm.
+-You must build the project after each change to see updates.
