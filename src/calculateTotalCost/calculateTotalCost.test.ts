@@ -24,4 +24,9 @@ describe('calculateTotalCost', () => {
   test('should return 0 when both costs are 0', () => {
     expect(calculateTotalCost(0, 0)).toBe(0);
   });
+
+  test('should handle decimal numbers', () => {
+    expect(calculateTotalCost(10.5, 5.25)).toBeCloseTo(15.75);
+    expect(calculateTotalCost(0.1, 0.2)).toBeCloseTo(0.3);
+  });
 });
