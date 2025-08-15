@@ -33,4 +33,9 @@ describe('calculatePaintCost', () => {
    test('should handle zero for both inputs', () => {
     expect(calculatePaintCost(0, 0)).toBe(0);
   });
+
+  test('should handle floating-point precision correctly', () => {
+    const result = calculatePaintCost(0.1, 0.2);
+    expect(result).toBeCloseTo(0.02, 5); // up to 5 decimal places
+  });
 });
