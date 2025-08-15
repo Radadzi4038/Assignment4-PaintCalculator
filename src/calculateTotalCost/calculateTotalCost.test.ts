@@ -38,4 +38,8 @@ describe('calculateTotalCost', () => {
     expect(calculateTotalCost(-10.5, 5.25)).toBeCloseTo(-5.25);
     expect(calculateTotalCost(10.5, -5.25)).toBeCloseTo(5.25);
   });
+
+  test('should handle extremely small numbers', () => {
+    expect(calculateTotalCost(0.0001, 0.0002)).toBeCloseTo(0.0003);
+  });
 });
