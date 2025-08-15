@@ -26,5 +26,4 @@ describe('convertAreaToSquareFeet', () => {
     expect(convertAreaToSquareFeet(1_000_000)).toBeCloseTo(10_763_900);
   });
 
-  
 });
