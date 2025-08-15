@@ -21,4 +21,8 @@ describe('convertAreaToSquareFeet', () => {
     expect(convertAreaToSquareFeet(0.0001)).toBeCloseTo(0.00108);
     expect(convertAreaToSquareFeet(0.0005)).toBeCloseTo(0.00538);
   });
+
+  test('should handle very large areas', () => {
+    expect(convertAreaToSquareFeet(1_000_000)).toBeCloseTo(10_763_900);
+  });
 });
