@@ -13,4 +13,9 @@ describe('calculateCanvasSize', () => {
   it('should correctly handle decimal string values', () => {
     expect(calculateCanvasSize("3.5", "2")).toBeCloseTo(7);
   });
+
+  it("should calculate size when given numeric strings", () => {
+    expect(calculateCanvasSize("10", "5")).toBe(50);
+  });
+  
 });
