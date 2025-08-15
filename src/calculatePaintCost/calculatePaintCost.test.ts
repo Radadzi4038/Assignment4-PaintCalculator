@@ -25,4 +25,9 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(2.5, 4.2)).toBeCloseTo(10.5);
     expect(calculatePaintCost(5.5, 3.3)).toBeCloseTo(18.15);
   });
+
+  test('should handle very large numbers', () => {
+    expect(calculatePaintCost(1_000_000, 2_000)).toBe(2_000_000_000);
+  });
+  
 });
