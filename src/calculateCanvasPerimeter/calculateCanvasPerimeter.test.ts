@@ -17,6 +17,10 @@ describe("calculateCanvasPerimeter", () => {
     expect(calculateCanvasPerimeter("10", "b")).toBeNaN();
   });
 
+  test("returns correct perimeter when one side is zero", () => {
+    expect(calculateCanvasPerimeter("0", "5")).toEqual(10);
+    expect(calculateCanvasPerimeter("7", "0")).toEqual(14);
+  });
 
 
 });
