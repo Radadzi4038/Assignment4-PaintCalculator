@@ -7,8 +7,16 @@ describe("calculateCanvasPerimeter", () => {
   });
 
   test("handles whitespace in inputs", () => {
-  // RED: fails if trim() not used
-  expect(calculateCanvasPerimeter(" 10 ", " 20 ")).toEqual(60);
-});
+    // RED: fails if trim() not used
+    expect(calculateCanvasPerimeter(" 10 ", " 20 ")).toEqual(60);
+  });
+
+  test("returns NaN for non-numeric inputs", () => {
+    // RED: fails if NaN not handled
+    expect(calculateCanvasPerimeter("a", "10")).toBeNaN();
+    expect(calculateCanvasPerimeter("10", "b")).toBeNaN();
+  });
+
+
 
 });
