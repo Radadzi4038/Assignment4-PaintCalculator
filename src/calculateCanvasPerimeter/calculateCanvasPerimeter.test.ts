@@ -22,5 +22,10 @@ describe("calculateCanvasPerimeter", () => {
     expect(calculateCanvasPerimeter("7", "0")).toEqual(14);
   });
 
+  test("handles very large numbers", () => {
+  expect(calculateCanvasPerimeter("1000000000000", "2000000000000")).toEqual(6000000000000);
+  expect(calculateCanvasPerimeter("1e12", "2e12")).toEqual(6e12);
+});
+
 
 });
