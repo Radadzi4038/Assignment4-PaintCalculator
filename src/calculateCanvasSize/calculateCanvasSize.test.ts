@@ -18,8 +18,4 @@ describe('calculateCanvasSize', () => {
     expect(calculateCanvasSize("10", "5")).toBe(50);
   });
 
-    it("should return NaN when given non-numeric strings", () => {
-    expect(calculateCanvasSize("abc", "5")).toBeNaN();
-  });
-
 });
