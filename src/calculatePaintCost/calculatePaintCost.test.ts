@@ -29,5 +29,8 @@ describe('calculatePaintCost', () => {
   test('should handle very large numbers', () => {
     expect(calculatePaintCost(1_000_000, 2_000)).toBe(2_000_000_000);
   });
-  
+
+   test('should handle zero for both inputs', () => {
+    expect(calculatePaintCost(0, 0)).toBe(0);
+  });
 });
