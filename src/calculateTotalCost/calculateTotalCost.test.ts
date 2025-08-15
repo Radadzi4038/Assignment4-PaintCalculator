@@ -29,4 +29,8 @@ describe('calculateTotalCost', () => {
     expect(calculateTotalCost(10.5, 5.25)).toBeCloseTo(15.75);
     expect(calculateTotalCost(0.1, 0.2)).toBeCloseTo(0.3);
   });
+
+  test('should handle very large numbers', () => {
+    expect(calculateTotalCost(1_000_000_000, 2_000_000_000)).toBe(3_000_000_000);
+  });
 });
