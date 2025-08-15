@@ -20,4 +20,6 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(10, -5)).toBe(-50);
     expect(calculatePaintCost(-10, -5)).toBe(50);
   });
+
+  
 });
